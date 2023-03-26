@@ -10,11 +10,119 @@
 </head>
 <body>
     <div class="onboarding-container">
-  <div class="onboarding-content">
-    <h1>Welcome to our Used Items App!</h1>
-    <p>Buy and sell second-hand items with ease.</p>
-    <button class="onboarding-button" id="start-button">Get Started</button>
+      <div class="onboarding-content">
+        <h1>Welcome to our Used Items App!</h1>
+        <p>Buy and sell second-hand items with ease.</p>
+        <button class="onboarding-button" id="start-button">Get Started</button>
+      </div>
+    </div>
+
+    <!--HTML code for registering-->
+    <div class="register-container">
+      <h1>Register an account</h1>
+      <form id="register-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+    
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <!-- HTML for shopping cart page -->
+    <div class="cart-container">
+      <h1>Shopping Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+        </tbody>
+      </table>
+      <div class="cart-total">
+        <h2>Total: <span id="cart-total"></span></h2>
+      </div>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+
+    <div class="items-container">
+      <h1>Items for sale</h1>
+      <ul id="items-list"></ul>
+    </div>
+    
+    <!-- Template for displaying each item -->
+    <template id="item-template">
+      <li>
+        <h2 class="item-name"></h2>
+        <p class="item-description"></p>
+        <p class="item-price"></p>
+      </li>
+    </template>
+
+    <!-- HTML for login page -->
+    <div class="login-container">
+      <h1>Login</h1>
+        <form id="login-form">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- HTML for user profile page -->
+    <div class="profile-container">
+      <h1>My Profile</h1>
+      <form id="profile-form">
+      <label for="profile-photo">Profile Photo:</label>
+      <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+  
+      <label for="profile-firstname">First Name:</label>
+      <input type="text" id="profile-firstname" name="profile-firstname" required>
+  
+      <label for="profile-lastname">Last Name:</label>
+      <input type="text" id="profile-lastname" name="profile-lastname" required>
+  
+      <label for="profile-location">Location:</label>
+      <input type="text" id="profile-location" name="profile-location" required>
+  
+      <label for="profile-contact">Contact Details:</label>
+      <textarea id="profile-contact" name="profile-contact" required></textarea>
+  
+      <button type="submit">Save</button>
+      </form>
   </div>
+
+  <!-- HTML for upload item form -->
+  <div class="upload-container">
+    <h1>Upload Item</h1>
+    <form id="upload-form">
+    <label for="item-name">Name:</label>
+    <input type="text" id="item-name" name="item-name" required>
+
+    <label for="item-description">Description:</label>
+    <textarea id="item-description" name="item-description" required></textarea>
+
+    <label for="item-price">Price:</label>
+    <input type="number" id="item-price" name="item-price" step="0.01" min="0" required>
+
+    <label for="item-image">Image:</label>
+    <input type="file" id="item-image" name="item-image" accept="image/*" required>
+
+    <button type="submit">Upload</button>
+    </form>
 </div>
 
 
